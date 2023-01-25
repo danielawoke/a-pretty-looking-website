@@ -1,0 +1,61 @@
+body{
+	background-color: lightblue;
+	overflow: hidden;
+
+}
+#front{
+	text-align: center;
+	position: relative;
+	font-family: "Open Sans";
+	font-size: 50px;
+	margin-top: 10%;
+	color: white;
+	font-weight: bolder;
+}
+
+#cloud1{
+	position: relative;
+	width: 400px;
+	height: 250px;
+	top: 20px;
+	left: 0px;
+	z-index: 9;
+}
+
+#cloud2{
+	position: relative;
+	width: 400px;
+	height: 250px;
+	top: 20px;
+	left: 1500px;
+	z-index: 9;	
+	top: 200px;
+}
+
+
+#wrapper{
+	margin: auto;
+	width: 1920px;
+	min-width: 1920px;
+	max-width: 1920px;
+	position: relative;
+	}
+#small{
+	text-align: center;
+	color: black;
+	font-size: 20px;
+	position: relative;
+	top: 20px;
+	visibility: visible;
+	font-family: "OCR A Std";
+
+}
+
+#wrapper2{
+	width: 1000px;
+	margin: auto;
+	position: relative;
+	left: 200px;
+	top: 200px;
+}
+  
