@@ -87,6 +87,7 @@ function cleanStage(){
 var soup = false;
 function moveUp(){
 	if(i>-100){
+		print(i);
 		i = i-idt;
 		all.style.top = ""+i+"px";
 		idt=idt+20;
