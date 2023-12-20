@@ -89,7 +89,7 @@ function moveUp(){
 	if(i<1000){
 		i = i-idt;
 		all.style.top = ""+i+"px";
-		idt=idt+.05;
+		idt=idt+20;
 	}else {
 		soup = true;
 		earthComing();
