@@ -89,7 +89,7 @@ function moveUp(){
 	if(i>-100){
 		print(i);
 		i = i-idt;
-		all.style.top = ""+i+"px";
+		//all.style.top = ""+i+"px";
 		idt=idt+20;
 	}else {
 		soup = true;
@@ -274,7 +274,7 @@ function earthComing(){
 
 		planet = document.getElementById("wrapper2");
 		planet.style.opacity = "0"; 
-		planet.style.top = "100%";
+		//planet.style.top = "100%";
 
 		//setInterval(brightUp,10);
 		//setInterval(brightUp2,10);
