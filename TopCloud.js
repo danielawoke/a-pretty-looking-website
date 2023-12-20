@@ -312,14 +312,14 @@ var bot = 100;
 var zs = false;
 
 function brightUp(){
-	//if(zs ){
-	//	op = op+.01;
-	//	bot = bot-1;
-	//}
+	if(zs ){
+		op = op+.01;
+		bot = bot-1;
+	}
 }
 function brightUp2(){
-		//planet.style.top = ""+bot+"%";
-		//planet.style.opacity = ""+op;
+		planet.style.top = ""+bot+"%";
+		planet.style.opacity = ""+op;
 }
 
 function rothchild(){console.log("the roths child got us");
