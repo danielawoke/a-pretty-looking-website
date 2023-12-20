@@ -76,7 +76,7 @@ cloud1.addEventListener('mouseout', e =>{
 
 window.addEventListener("click", cleanStage);
 
-let i = 0;	
+let i = 0.0;	
 let idt = .1;
 var all = document.getElementById("wrapper");
 
@@ -141,7 +141,7 @@ function earthComing(){
 		var slash = document.createElement("div");
 		slash.id = "leftCut";
 		slash.innerHTML = "<style>#leftCut{position:absolute; left:-250px; width: 500px; height:500px; position:relative;overflow:hidden;} #leftCut::before{content:'';  position:absolute; left: 50%;height:100%; width: 100%; border-radius:50%; box-shadow: 0px 1200px 0px 1200px lightblue; top:0px;}</style>";
-		document.getElementById("wrapper2").appendChild(slash, newWrapper[0]);
+		document.getElementById("wrapper2").appendChildto(slash, newWrapper[0]);
 		var slash2 = document.createElement("div");
 		slash2.id = "rightCut";
 		slash2.innerHTML = "<style>#rightCut{position:absolute; left:250px; top:-500px; width: 500px; height:500px; position:relative;overflow:hidden; z-index:3;} #rightCut::before{content:'';  position:absolute; right: 50%;height:100%; width: 100%; border-radius:50%; box-shadow: 0px 1200px 0px 1200px lightblue; top:0px;}</style>";
@@ -318,8 +318,8 @@ function brightUp(){
 	}
 }
 function brightUp2(){
-		planet.style.top = ""+bot+"%";
-		planet.style.opacity = ""+op;
+		//planet.style.top = ""+bot+"%";
+		//planet.style.opacity = ""+op;
 }
 
 function rothchild(){console.log("the roths child got us");
