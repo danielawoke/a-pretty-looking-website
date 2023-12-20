@@ -82,7 +82,7 @@ var all = document.getElementById("wrapper");
 
 function cleanStage(){
 	let ammount = 0;
-	var s = setInterval(moveUp,10);
+	//var s = setInterval(moveUp,10);
 }
 var soup = false;
 function moveUp(){
