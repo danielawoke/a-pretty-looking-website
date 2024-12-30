@@ -75,7 +75,7 @@ cloud1.addEventListener('mouseout', e =>{
 
 
 
-wrap.addEventListener("click", cleanStage);
+wrap.addEventListener("onclick", cleanStage);
 
 let i = 0.0;	
 let idt = .1;
