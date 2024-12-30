@@ -1,6 +1,7 @@
 var cloud1 = document.getElementById("cloud1");
 var cloud1LeftHalf = document.getElementById("leftHalf");
 var cloud1RightHalf = document.getElementById("rightHalf");
+var wrap = document.getElementById("wrapper");
 var title = document.getElementById("front");
 title.style.opacity = 0;
 var oc = 0;
@@ -74,7 +75,7 @@ cloud1.addEventListener('mouseout', e =>{
 
 
 
-window.addEventListener("click", cleanStage);
+wrap.addEventListener("click", cleanStage);
 
 let i = 0.0;	
 let idt = .1;
