@@ -12,9 +12,3 @@ Regards from you're passing client, Daniel Awoke
 
 
 ![Screenshot 2023-12-20 002652](https://github.com/danielawoke/a-pretty-looking-website/assets/72922216/20f4101d-52fd-4d39-9829-36377918383f)
-
-
-****DISCLAIMER***********
-THIS ONLY WORKS ON CHROME. IF YOU USE THIS ON FIRE FOX IT THE EARTH WILL ZIP PAST YOUR SCREEN.
-
-I'll probably fix it later but just keep that in mind.
