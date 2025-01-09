@@ -1,6 +1,7 @@
 var cloud1 = document.getElementById("cloud1");
 var cloud1LeftHalf = document.getElementById("leftHalf");
 var cloud1RightHalf = document.getElementById("rightHalf");
+var wrap = document.getElementById("wrapper");
 var title = document.getElementById("front");
 title.style.opacity = 0;
 var oc = 0;
@@ -74,7 +75,6 @@ cloud1.addEventListener('mouseout', e =>{
 
 
 
-window.addEventListener("click", cleanStage);
 
 let i = 0.0;	
 let idt = .1;
@@ -82,20 +82,24 @@ var all = document.getElementById("wrapper");
 
 function cleanStage(){
 	let ammount = 0;
-	//var s = setInterval(moveUp,10);
+	setInterval(moveUp,.1)
 }
+
 var soup = false;
 function moveUp(){
-	if(i>-100){
-		print(i);
+	if(i>-1000){
+		console.log(i);
 		i = i-idt;
-		//all.style.top = ""+i+"px";
-		idt=idt+20;
-	}else {
+		all.style.top = ""+i+"px";
+		idt=idt+.5;
+	}else if(!soup) {
 		soup = true;
 		earthComing();
 	}
 }
+
+var op = 0;
+var bot = 100;
 
 var happend = false;
 function earthComing(){
@@ -109,7 +113,9 @@ function earthComing(){
 		circle.id = "slapMe";
 		circle.innerHTML = "<style type='text/css'> #slapMe{;background-color:navy;width: 500px;height: 500px;border: 1px solid black; border-radius: 50%; margin:auto;position:absolute;z-index:-1;top:0px;}</stlye>";
 		var sq = document.getElementById("wrapper");
-		document.body.removeChild(sq);
+		if(sq!= null){
+			document.body.removeChild(sq);
+		}
 		var img = document.createElement("img");
 		img.style.position = "absolute";
 		img.style.width = "1100px";
@@ -140,11 +146,11 @@ function earthComing(){
 		document.getElementById("wrapper2").appendChild(circle, newWrapper[0]);
 		var slash = document.createElement("div");
 		slash.id = "leftCut";
-		slash.innerHTML = "<style>#leftCut{position:absolute; left:-250px; width: 500px; height:500px; position:relative;overflow:hidden;} #leftCut::before{content:'';  position:absolute; left: 50%;height:100%; width: 100%; border-radius:50%; box-shadow: 0px 1200px 0px 1200px lightblue; top:0px;}</style>";
-		document.getElementById("wrapper2").appendChildto(slash, newWrapper[0]);
+		slash.innerHTML = "<style>#leftCut{position:absolute; left:-250px; width: 500px; height:500px; position:relative;overflow:hidden;} #leftCut::before{content:'';    position:absolute; left: 50%;height:100%; width: 100%; border-radius:50%; box-shadow: 0px 1200px 0px 1200px lightblue; top:-30px;}</style>";
+		document.getElementById("wrapper2").appendChild(slash, newWrapper[0]);
 		var slash2 = document.createElement("div");
 		slash2.id = "rightCut";
-		slash2.innerHTML = "<style>#rightCut{position:absolute; left:250px; top:-500px; width: 500px; height:500px; position:relative;overflow:hidden; z-index:3;} #rightCut::before{content:'';  position:absolute; right: 50%;height:100%; width: 100%; border-radius:50%; box-shadow: 0px 1200px 0px 1200px lightblue; top:0px;}</style>";
+		slash2.innerHTML = "<style>#rightCut{position:absolute; left:250px; top:-500px; width: 500px; height:500px; position:relative;overflow:hidden; z-index:3;} #rightCut::before{content:'';  position:absolute; right: 50%;height:100%; width: 100%; border-radius:50%; box-shadow: 0px 1800px 0px 1800px lightblue; top:-30px;}</style>";
 		document.getElementById("wrapper2").appendChild(slash2, newWrapper[0]);
 
 		var leftCover = document.createElement("div");
@@ -171,10 +177,10 @@ function earthComing(){
 
 
 		
-
-
 		occured = true;
 	}
+
+
 
 	if(occured){
 		var x = 0;
@@ -188,6 +194,16 @@ function earthComing(){
 		var LM = false;
 		var RM = false;
 
+		
+		leftRot.addEventListener("mouseover",LR);
+		rightRot.addEventListener("mouseover",RR);
+		rightRot.addEventListener("mouseout",settle);
+		leftRot.addEventListener("mouseout",settle);
+
+		planet = document.getElementById("wrapper2");
+		planet.style.opacity = op+""; 
+		planet.style.top = bot+"%";
+
 		function RR(){
 			LM = true;
 		}
@@ -198,13 +214,13 @@ function earthComing(){
 			LM = false;
 			RM = false;
 		}
-
+		
 		function LI(){
-
+		
 			if(dx>100 || dx<-100){
 				rothchild();
 			}
-
+		
 			if(RM){
 				x = x+dx;
 				dx= dx+.1;
@@ -214,13 +230,13 @@ function earthComing(){
 				z=z+dz;
 			}
 		}
-
+		
 		function RI(){
 			
 			if(dx>100 || dx<-100){
 				rothchild();
 			}
-
+		
 			if(LM){
 				x = x+dx;
 				dx= dx-.1;
@@ -251,7 +267,7 @@ function earthComing(){
 			}
 		}
 		function theOnlyThingThatMAtters(){
-
+		
 			if(x<-1100){
 				x=0;
 				y=1100;
@@ -266,19 +282,11 @@ function earthComing(){
 			img2.style.left = ""+y+"px";
 			img.style.left = ""+x+"px";
 		}
+		
 
-		leftRot.addEventListener("mouseover",LR);
-		rightRot.addEventListener("mouseover",RR);
-		rightRot.addEventListener("mouseout",settle);
-		leftRot.addEventListener("mouseout",settle);
-
-		planet = document.getElementById("wrapper2");
-		planet.style.opacity = "0"; 
-		//planet.style.top = "100%";
-
-		//setInterval(brightUp,10);
-		//setInterval(brightUp2,10);
-		//zs = true;
+		setInterval(brightUp,1);
+		setInterval(brightUp2,1);
+		zs = true;
 
 		leftCover.addEventListener('mouseover', e =>{
 			RM = true;
@@ -299,27 +307,32 @@ function earthComing(){
 
 		}, true);
 
-		setInterval(RI,10);
-		setInterval(LI,10);
-		setInterval(gapTooth,10);
-		setInterval(theOnlyThingThatMAtters, 10);
+		setInterval(RI,.01);
+		setInterval(LI,.01);
+		setInterval(gapTooth,.01);
+		setInterval(theOnlyThingThatMAtters, .01);
 	}
 
 }
 
-var op = 0;
-var bot = 100;
+
+
+
 var zs = false;
 
 function brightUp(){
-	if(zs ){
+	if(op<1){
 		op = op+.01;
+	}
+	if(bot<100){
 		bot = bot-1;
 	}
 }
 function brightUp2(){
+		
 		planet.style.top = ""+bot+"%";
 		planet.style.opacity = ""+op;
+		
 }
 
 function rothchild(){console.log("the roths child got us");
@@ -340,8 +353,8 @@ function rothchild(){console.log("the roths child got us");
 			document.getElementById("earth2").style.filter = "grayscale(100%)";
 			document.getElementById("earth3").style.filter = "grayscale(100%)";
 			document.body.style.backgroundColor = "#4D2121";
-			document.getElementById("leftCut").innerHTML = "<style>#leftCut{position:absolute; left:-250px; width: 500px; height:500px; position:relative;overflow:hidden;} #leftCut::before{content:'';  position:absolute; left: 50%;height:100%; width: 100%; border-radius:50%; box-shadow: 0px 1200px 0px 1200px #4D2121; top:0px;}</style>";
-			document.getElementById("rightCut").innerHTML = "<style>#rightCut{position:absolute; left:250px; top:-500px; width: 500px; height:500px; position:relative;overflow:hidden; z-index:3;} #rightCut::before{content:'';  position:absolute; right: 50%;height:100%; width: 100%; border-radius:50%; box-shadow: 0px 1200px 0px 1200px #4D2121; top:0px;}</style>";
+			document.getElementById("leftCut").innerHTML = "<style>#leftCut{position:absolute; left:-250px; width: 500px; height:500px; position:relative;overflow:hidden;} #leftCut::before{content:'';  position:absolute; left: 50%;height:100%; width: 100%; border-radius:50%; box-shadow: 0px 1800px 0px 1800px #4D2121; top:0px;}</style>";
+			document.getElementById("rightCut").innerHTML = "<style>#rightCut{position:absolute; left:250px; top:-500px; width: 500px; height:500px; position:relative;overflow:hidden; z-index:3;} #rightCut::before{content:'';  position:absolute; right: 50%;height:100%; width: 100%; border-radius:50%; box-shadow: 0px 1800px 0px 1800px #4D2121; top:0px;}</style>";
 			document.getElementById("bottom").style.backgroundColor = "#4D2121";
 			document.getElementById("right").style.backgroundColor = "#4D2121";
 			document.getElementById("left").style.backgroundColor = "#4D2121";
