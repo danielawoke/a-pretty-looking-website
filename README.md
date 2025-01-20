@@ -1,6 +1,6 @@
 Your majesty,
 
-This project is just a cool little website made to show off some graphic front end skills.
+This project is just a website made to show off some graphic front end skills.
 When trying to analyze what factors make a website a high quality one, I concluded that good
 interactive animations are the key component. As a result I made this website with that idea
 in mind. You can move the clouds around, and the earth spins
