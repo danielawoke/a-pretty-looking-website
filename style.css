@@ -5,41 +5,39 @@ body{
 }
 #front{
 	text-align: center;
-	position: relative;
 	font-family: "Open Sans";
 	font-size: 50px;
-	margin-top: 10%;
+	margin-top: 50vh;
+	display:block;
+	margin:auto;
 	color: white;
 	font-weight: bolder;
 }
 
 #cloud1{
 	position: relative;
+	padding-bottom: 5vh;
 	width: 400px;
 	height: 250px;
-	top: 20px;
+	top: 5%;
 	left: 0px;
 	z-index: 9;
 }
 
+
+
 #cloud2{
-	position: relative;
+	position: absolute;
+	display:block;
 	width: 400px;
 	height: 250px;
-	top: 20px;
-	left: 1500px;
 	z-index: 9;	
-	top: 200px;
+	padding-top:-10px;
+	top:70vh;
+	right:0;
+	
 }
 
-
-#wrapper{
-	margin: auto;
-	width: 1920px;
-	min-width: 1920px;
-	max-width: 1920px;
-	position: relative;
-	}
 #small{
 	text-align: center;
 	color: black;
@@ -48,14 +46,22 @@ body{
 	top: 20px;
 	visibility: visible;
 	font-family: "OCR A Std";
-
 }
 
 #wrapper2{
-	width: 1000px;
+	width: 300px;
+	display: block;
 	margin: auto;
 	position: relative;
 	left: 200px;
 	top: 200px;
 }
   
+#wrapper{
+
+	display: block;
+	margin: auto;
+	position: relative;
+	width:100vw;
+	height:100vh;
+}

@@ -1,12 +1,12 @@
 var cloud2 = document.getElementById("cloud2");
-var cloud2LeftHalf = document.getElementById("leftHalf2");
-var cloud2RightHalf = document.getElementById("rightHalf2");
-var x2 = 1500;
-var x2rate = -.1;
+var cloud2LeftHalf = document.getElementById("rightHalf2");
+var cloud2RightHalf = document.getElementById("leftHalf2");
+var x2 = 0;
+var x2rate = -.01;
 var we = false;
 var qw = false;
 function moveCloud2(){
-	cloud2.style.left =""+x2+"px";
+	cloud2.style.right =""+x2+"px";
 	x2 = x2+x2rate;
 }
 
@@ -23,11 +23,11 @@ function speedRight2(){
 }
 function slow2(){
 		if(we == false && qw == false){ 
-		if(x2rate<-.1){
+		if(x2rate<-.01){
 			console.log("problem");
 			x2rate = x2rate+.05;
 		}
-		if(x2rate>-.1){
+		if(x2rate>-.01){
 			console.log("problem");
 			x2rate = x2rate-.05;
 		}
