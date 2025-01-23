@@ -78,7 +78,7 @@ cloud1.addEventListener('mouseout', e =>{
 wrap.addEventListener("onclick", cleanStage);
 
 let i = 0.0;	
-let idt = .1;
+let idt = .01;
 var all = document.getElementById("wrapper");
 
 function cleanStage(){
@@ -87,10 +87,10 @@ function cleanStage(){
 }
 var soup = false;
 function moveUp(){
-	if(i>-100){
+	if(i>-1000){
 		i = i-idt;
 		all.style.top = ""+i+"px";
-		idt=idt+20;
+		idt=idt+.5;
 	}else {
 		soup = true;
 		earthComing();
@@ -129,7 +129,7 @@ function earthComing(){
 		circle.innerHTML = "<style type='text/css'> #slapMe{;background-color:navy;width: 500px;height: 500px;border: 1px solid black; border-radius: 50%; margin:auto;position:absolute;z-index:-1;top:0px;}</stlye>";
 		
 		var sq = document.getElementById("wrapper");
-		if(sq!=null){
+		if(sq!=null && i<=-1000){
 			document.body.removeChild(sq);
 		}
 		 img = document.createElement("img");
