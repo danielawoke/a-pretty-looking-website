@@ -1,4 +1,4 @@
-Your majesty,
+Your m a j e s t y,
 
 This project is just a website made to show off some graphic front end skills.
 When trying to analyze what factors make a website a high quality one, I concluded that good
