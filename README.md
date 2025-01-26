@@ -1,4 +1,4 @@
-<div>Your m a j e s t y,</div>
+<h1>Your m a j e s t y,</h1>
 
 This project is just a website made to show off some graphic front end skills.
 When trying to analyze what factors make a website a high quality one, I concluded that good
